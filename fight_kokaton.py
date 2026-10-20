@@ -212,7 +212,7 @@ def main():
                         pg.display.update()
         bombs = [bomb for bomb in bombs if bomb is not None]
 
-        for i, beam in enumerate(beams):
+        for i, beam in enumerate(beams): #画面外に出たビームを削除する
             if beam is not None:
                 if check_bound(beam.rct) != (True, True):
                     beams[i] = None
